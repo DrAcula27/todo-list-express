@@ -1,7 +1,10 @@
-h1{
-    color: red;
+/* make all h1 HTML content red */
+h1 {
+  color: red;
 }
-.completed{
-    color: gray;
-    text-decoration: line-through;
+
+/* make any HTML element with a class of completed grey and with a line through it */
+.completed {
+  color: gray;
+  text-decoration: line-through;
 }
