@@ -40,9 +40,9 @@ Now you can work on the code. The assignment is to comment every line. Start wit
 
 1. added styling
 1. change text at top dynamically if all tasks get completed
+1. added dark/light mode toggle
 
 ### Todos
 
-- [] add dark mode
 - [] update app to use list item ids instead of DOM text to make changes
 - [] improve list responsiveness on tiny screens

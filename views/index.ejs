@@ -23,7 +23,11 @@
       src="https://kit.fontawesome.com/940af2685d.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="icon" type="image/png" href="./PATH/ICON.EXTENSION" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../public/favicon.ico"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
 
@@ -36,15 +40,16 @@
       <h1 class="title">Todo List</h1>
     </header>
     <main>
+      <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
       <div class="paperContainer">
         <div class="paperContent">
           <h2 class="todosLeft">
             <% if ( left < 1 ) { %>
-              <span>All Done!</span>
+            <span>All Done!</span>
             <% } else { %>
-              <span><%= left %> Todos Left</span>
+            <span><%= left %> Todos Left</span>
             <% } %>
-          </h4>
+          </h2>
 
           <ul class="todoItems">
             <!-- EJS here for dynamically creating HTML based on data from database -->
@@ -72,7 +77,7 @@
             name="todoItem"
           />
           <!-- <input type="submit" /> -->
-          <button type="submit">Add Task</button>
+          <button type="submit" id="addTaskBtn">Add Task</button>
         </form>
       </div>
     </main>
