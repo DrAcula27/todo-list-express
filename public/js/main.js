@@ -114,3 +114,30 @@ async function markUnComplete() {
     console.log(err);
   }
 }
+
+// Check for saved theme preference in localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.body.classList.add(savedTheme);
+}
+
+// Toggle dark mode
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+  const currentTheme = document.body.classList.contains('dark')
+    ? 'dark'
+    : 'light';
+
+  // Toggle theme
+  if (currentTheme === 'dark') {
+    document.body.classList.remove('dark');
+    document.body.classList.add('light');
+    darkModeToggle.textContent = '🌙'; // Change button text for light mode
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.body.classList.remove('light');
+    document.body.classList.add('dark');
+    darkModeToggle.textContent = '🌞'; // Change button text for dark mode
+    localStorage.setItem('theme', 'dark');
+  }
+});
